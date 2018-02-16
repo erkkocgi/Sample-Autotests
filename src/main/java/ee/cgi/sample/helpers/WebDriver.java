@@ -213,17 +213,17 @@ public class WebDriver {
      *
      */
 
-    public void doPageOpen() {
-        String url = System.getProperty("env.url");
-
-        if(url == null || url.isEmpty()){
-            driver.get(EnvironmentProperties.get().url);
-        }else {
-            url = System.getProperty("env.url");
-            driver.get(url);
-        }
-
-    }
+//    public void doPageOpen() {
+//        String url = System.getProperty("env.url");
+//
+//        if(url == null || url.isEmpty()){
+//            driver.get(EnvironmentProperties.get().url);
+//        }else {
+//            url = System.getProperty("env.url");
+//            driver.get(url);
+//        }
+//
+//    }
 
     /**
      * Method for managing WebDriver executables and setting System properties for the geckodriver

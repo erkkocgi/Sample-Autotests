@@ -11,7 +11,6 @@ import org.openqa.selenium.Keys;
 import java.io.File;
 import java.io.IOException;
 
-import static ee.cgi.sample.helpers.WebDriver.get;
 import static org.jsoup.helper.Validate.fail;
 import static org.junit.Assert.assertTrue;
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -70,7 +69,8 @@ public class MasterTest extends TestBase {
         final Logger logger = LogManager.getLogger(testName.getMethodName());
 
         logger.info("Starting test " + testName.getMethodName());
-        logger.info("Opening page: " + url);
+        logger.info("Opening page: " + mailurl);
+        openPage(mailurl);
 
         try {
             // Logging in
@@ -97,10 +97,6 @@ public class MasterTest extends TestBase {
         } catch (Exception e) {
             catchTestFail(test, logger, e, testName.getMethodName());
         }
-    }
-
-        public void goToMainPage(){
-        get().getWebDriver().get(url);
     }
 
     public String getScreenshotName(String testClassName){

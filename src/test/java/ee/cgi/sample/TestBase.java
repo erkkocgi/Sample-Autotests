@@ -32,12 +32,12 @@ public class TestBase {
     protected static WikiPage wikiPage;
     protected static LoginPage loginPage;
     protected static ExtentReports extent;
-    protected static String url = "";
+    protected static String mailurl = "";
+    protected static String searchurl = "";
     protected static String logFolder = "";
     protected static String searchPhrase = "";
     protected static String user = "";
     protected static String pass = "";
-    protected static String searchurl = "";
 
     /**
      * JUNIT RULE to get test name from the testmethod
@@ -89,7 +89,6 @@ public class TestBase {
         ThreadContext.put("testName",testName.getMethodName());
 
         getProperties();
-        WebDriver.get().doPageOpen();
     }
 
 
@@ -133,9 +132,7 @@ public class TestBase {
     private static void readSettingsProperties() {
         Properties settings = PropertiesLoader.loadGeneralSettings();
         Properties environment = PropertiesLoader.loadEnvironmentSettings();
-        url = System.getProperty("env.url");
-        if(url == null || url.isEmpty())
-            url = environment.getProperty("mail.url");
+        mailurl = environment.getProperty("mail.url");
         searchurl = environment.getProperty("search.url");
         logFolder = environment.getProperty("logs.folder.name");
         searchPhrase = settings.getProperty("searchPhrase");

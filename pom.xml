@@ -24,7 +24,7 @@
         <propertiesplugin.version>1.0.0</propertiesplugin.version>
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-        <env.url>${env.url}</env.url>
+        <!--<env.url>${env.url}</env.url>-->
     </properties>
 
     <!-- Dependencies here -->

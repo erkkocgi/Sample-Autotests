@@ -24,11 +24,11 @@
 
 3. Execute the command to start the test (Other possible commands are in the next chapters):
 
-    mvn clean compile -Denv.url=https://some.url.com/ surefire-report:report site -DgenerateReports=false
+    mvn clean compile surefire-report:report site -DgenerateReports=false
 
 **Usage pattern for only running tests and generating reports/results:**
 
- *When giving the URL parameter in command line*
+ *When giving the URL parameter in command line, needs <env.url>${env.url}</env.url> in pom.xml file*
 
     mvn clean compile -Denv.url=https://some.url.com/ surefire-report:report site -DgenerateReports=false
 
